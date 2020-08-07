@@ -8,6 +8,7 @@ import "./styles.css"
 
 interface PageHeaderProps {
     title: string;
+    description?: string;
 }
 
 const PageHeader: React.FunctionComponent<PageHeaderProps> = (props): JSX.Element => {
@@ -23,6 +24,9 @@ const PageHeader: React.FunctionComponent<PageHeaderProps> = (props): JSX.Elemen
                 <strong>
                     {props.title}
                 </strong>
+                {
+                    props.description && <p>{props.description}</p>  
+                }
                 {props.children}
             </div>
         </header>
